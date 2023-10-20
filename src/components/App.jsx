@@ -13,7 +13,7 @@ import ContactList from './ContactList';
 
 export function App() {
   const contacts = useSelector(state => state.contactsFilter.contacts);
-  const filter = useSelector(state => state.filter.contacts);
+  const filter = useSelector(state => state.contactsFilter.filter);
   const dispatch = useDispatch();
 
   const addContact = (name, number) => {
