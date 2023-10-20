@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { nanoid } from 'nanoid';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -17,7 +17,7 @@ export function App() {
   const dispatch = useDispatch();
 
   const addContact = (name, number) => {
-    dispatch(addContactOnStore({ name, number }));
+    dispatch(addContactOnStore({ name, number, id: nanoid }));
   };
 
   const deleteContact = contactId => {
