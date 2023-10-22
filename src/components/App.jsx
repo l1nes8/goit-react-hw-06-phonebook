@@ -17,7 +17,7 @@ export function App() {
   const dispatch = useDispatch();
 
   const addContact = (name, number) => {
-    dispatch(addContactOnStore({ name, number, id: nanoid }));
+    dispatch(addContactOnStore({ name, number, id: nanoid() }));
   };
 
   const deleteContact = contactId => {
